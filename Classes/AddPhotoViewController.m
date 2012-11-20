@@ -49,7 +49,7 @@
     nameTextField.font = [UIFont systemFontOfSize:17.0];
     nameTextField.textColor = [UIColor value1DetailTextLabelColor];
     nameTextField.backgroundColor = [UIColor clearColor];
-    nameTextField.textAlignment = UITextAlignmentRight;
+    nameTextField.textAlignment = NSTextAlignmentRight;
     nameTextField.returnKeyType = UIReturnKeyDone;
     nameTextField.autocorrectionType = UITextAutocorrectionTypeNo;
     nameTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;    
@@ -63,7 +63,7 @@
     formatLabel.font = [UIFont systemFontOfSize:17.0];
     formatLabel.textColor = [UIColor value1DetailTextLabelColor];
     formatLabel.backgroundColor = [UIColor clearColor];
-    formatLabel.textAlignment = UITextAlignmentRight;
+    formatLabel.textAlignment = NSTextAlignmentRight;
     formatLabel.text = format;
     
     slider = [[UISlider alloc] init];
@@ -197,7 +197,7 @@
         qualityLabel.font = [UIFont systemFontOfSize:17.0];
         qualityLabel.textColor = [UIColor value1DetailTextLabelColor];
         qualityLabel.backgroundColor = [UIColor clearColor];
-        qualityLabel.textAlignment = UITextAlignmentRight;
+        qualityLabel.textAlignment = NSTextAlignmentRight;
         [cell addSubview:qualityLabel];
     }
     
@@ -371,7 +371,7 @@
         object.data = nil;
         [folder.objects setObject:object forKey:object.name];
         [folderViewController.tableView reloadData];
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES];
 
     } failure:^(OpenStackRequest *request) {
         
